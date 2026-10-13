@@ -16,7 +16,7 @@ groq_api_key = st.secrets["GROQ_API_KEY"]
 # Feed it explicitly into the LLM
 llm = ChatGroq(
     api_key=groq_api_key,
-    model_name="all-MiniLM-L6-v2"  
+    model_name="llama-3.3-70b-versatile"  
 )
 
 # --- PYDANTIC SCHEMAS FOR PHASE 2 ---
