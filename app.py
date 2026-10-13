@@ -12,8 +12,7 @@ from pydantic import BaseModel, Field
 clean_key = st.secrets["GROQ_API_KEY"].strip()
 os.environ["GROQ_API_KEY"] = clean_key
 
-# 2. Diagnostic to prove it worked
-st.info(f"Diagnostic: Length = {len(clean_key)} | Key looks like: {clean_key[:6]}...{clean_key[-4:]}")
+
 
 # 3. Initialize the LLM exactly ONCE (Updated to 3.1)
 llm = ChatGroq(
