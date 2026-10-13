@@ -53,7 +53,7 @@ def extract_pdf_text(pdf_file):
         page_text = page.extract_text()
         if page_text:
             text += page_text + "\n"
-    return text
+    return text.replace("\x00", "")  # <--- Added filter here
 
 @st.cache_resource
 def get_embedding_model():
