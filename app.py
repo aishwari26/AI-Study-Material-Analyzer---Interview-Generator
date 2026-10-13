@@ -14,10 +14,11 @@ os.environ["GROQ_API_KEY"] = clean_key
 
 # 2. Diagnostic to prove it worked
 st.info(f"Diagnostic: Length = {len(clean_key)} | Key looks like: {clean_key[:6]}...{clean_key[-4:]}")
-# 3. Initialize the LLM exactly ONCE
+
+# 3. Initialize the LLM exactly ONCE (Updated to 3.1)
 llm = ChatGroq(
     api_key=clean_key,
-    model_name="llama-3.3-70b-versatile"
+    model_name="llama-3.1-70b-versatile"
 )
 
 # --- PYDANTIC SCHEMAS FOR PHASE 2 ---
@@ -64,8 +65,6 @@ if uploaded_file:
     with st.spinner("Reading PDF contents..."):
         raw_text = extract_pdf_text(uploaded_file)
         
-    
-    
     # --- RAG VECTOR STORE CREATION ---
     with st.spinner("Indexing PDF into Vector Database for Q&A..."):
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
