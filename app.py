@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 from pypdf import PdfReader
 from langchain_groq import ChatGroq
@@ -7,16 +8,17 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from pydantic import BaseModel, Field
 
+# 1. Pull the key and strip invisible spaces
+clean_key = st.secrets["GROQ_API_KEY"].strip()
+os.environ["GROQ_API_KEY"] = clean_key
 
+# 2. Diagnostic to prove it worked
+st.info(f"Diagnostic: Key loaded. Length = {len(clean_key)}")
 
-
-# Pull the key directly from the Streamlit Secrets dashboard
-groq_api_key = st.secrets["GROQ_API_KEY"]
-
-# Feed it explicitly into the LLM
+# 3. Initialize the LLM exactly ONCE
 llm = ChatGroq(
-    api_key=groq_api_key,
-    model_name="llama-3.3-70b-versatile"  
+    api_key=clean_key,
+    model_name="llama-3.3-70b-versatile"
 )
 
 # --- PYDANTIC SCHEMAS FOR PHASE 2 ---
