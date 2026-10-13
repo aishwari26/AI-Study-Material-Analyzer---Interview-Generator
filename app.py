@@ -64,12 +64,7 @@ if uploaded_file:
     with st.spinner("Reading PDF contents..."):
         raw_text = extract_pdf_text(uploaded_file)
         
-    # --- FIXED GROQ MODEL HERE ---
-    llm = ChatGroq(
-        model="openai/gpt-oss-20b", 
-        temperature=0.3,
-        api_key="Paste your gsk_ key here"  # <--- Paste your gsk_ key here
-    )
+    
     
     # --- RAG VECTOR STORE CREATION ---
     with st.spinner("Indexing PDF into Vector Database for Q&A..."):
