@@ -17,7 +17,7 @@ os.environ["GROQ_API_KEY"] = clean_key
 # 3. Initialize the LLM exactly ONCE (Updated to 3.1)
 llm = ChatGroq(
     api_key=clean_key,
-    model_name="llama-3.1-8b-instant"
+    model_name="openai/gpt-oss-20b"
 )
 
 # --- PYDANTIC SCHEMAS FOR PHASE 2 ---
