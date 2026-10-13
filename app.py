@@ -6,12 +6,19 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from pydantic import BaseModel, Field
-import os
 
 
-# Map Streamlit secrets to environment variables for LangChain/Groq
-if "GROQ_API_KEY" in st.secrets:
-    os.environ["GROQ_API_KEY"] = st.secrets["GROQ_API_KEY"]
+
+
+# Pull the key directly from the Streamlit Secrets dashboard
+groq_api_key = st.secrets["GROQ_API_KEY"]
+
+# Feed it explicitly into the LLM
+llm = ChatGroq(
+    api_key=groq_api_key,
+    model_name="all-MiniLM-L6-v2"  
+)
+
 # --- PYDANTIC SCHEMAS FOR PHASE 2 ---
 class MCQ(BaseModel):
     question: str = Field(description="The multiple choice question based on the text")
