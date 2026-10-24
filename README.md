@@ -1,7 +1,7 @@
 
 # 📚 AI Study Material Analyzer & Interview Generator
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](YOUR_LIVE_APP_URL)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)]()
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B.svg)](https://streamlit.io/)
 [![LangChain](https://img.shields.io/badge/LangChain-Framework-black.svg)](https://www.langchain.com/)
@@ -93,6 +93,5 @@ streamlit run app.py
 
 **Aishwari Bambale**
 
-- **LinkedIn:** YOUR_LINKEDIN_PROFILE_URL
+- **LinkedIn:** https://www.linkedin.com/in/aishwari-bambale-6b4b81442/
 - **GitHub:** https://github.com/aishwari26
-- **Portfolio/Wellfound:** YOUR_PORTFOLIO_OR_WELLFOUND_URL
