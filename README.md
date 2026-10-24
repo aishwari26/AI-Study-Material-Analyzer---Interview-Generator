@@ -8,7 +8,7 @@
 
 An intelligent GenAI application that processes study materials and automatically generates highly relevant, context-aware interview questions. Built to help students and professionals test their knowledge instantly based on their own notes, documents, or textbooks.
 
-**Try the live app here:** [Launch AI Interview Generator](YOUR_LIVE_APP_URL)
+**Try the live app here:** [Launch AI Interview Generator](https://ai-study-material-analyzer---interview-generator-vsfbzkiqxgeuq.streamlit.app/)
 
 ---
 
@@ -83,7 +83,7 @@ streamlit run app.py
 
 ## 💡 How to Use
 
-1. Open the [Live App](YOUR_LIVE_APP_URL).
+1. Open the [Live App](https://ai-study-material-analyzer---interview-generator-vsfbzkiqxgeuq.streamlit.app/).
 2. Upload your study material, notes, or a supported document.
 3. Let the application analyze the uploaded content.
 4. Generate targeted interview or exam questions based on your material.
