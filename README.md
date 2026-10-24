@@ -1,7 +1,7 @@
 
 # 📚 AI Study Material Analyzer & Interview Generator
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)]()
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](https://ai-study-material-analyzer---interview-generator-vsfbzkiqxgeuq.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B.svg)](https://streamlit.io/)
 [![LangChain](https://img.shields.io/badge/LangChain-Framework-black.svg)](https://www.langchain.com/)
